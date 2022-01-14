@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <!-- Loading literal value from properties file to ignore hardcoding -->
+    <context:property-placeholder location="classpath:personal.properties"/>
+
+    <!-- Define your beans here -->
+    
+    
+<bean id="myCoach"
+class="com.iocdemo.BaseballCoach">
+   <!-- Set up constructor injection -->
+    <constructor-arg ref="myFortune"/>
+</bean>
+    
+    
+    
+    <!--Define the dependency class -->
+    
+    <bean id="myFortune"
+    class="com.iocdemo.MyFortune">
+     
+    </bean>
+    
+    
+    
+    <bean id="myCricketCoach"
+   	 class = "com.iocdemo.CricketCoach">
+    
+    		<!-- Setter injection within cricket coach -->
+    
+    			<property name="fortuneService"  ref="myFortune"></property>
+    
+    		<!-- Literal setter injection -->
+    
+    			<!-- <property name="email" value="amitmishraph@gmail.com"/>
+    			<property name="name" value="Amit Sunil Mishra"/> -->
+    			
+    			
+    			<!-- Avoiding hardcoding and set values from properties file -->
+    			<property name="email" value="${foo.name}"/>
+    			<property name="name" value="${foo.email}"/>
+    </bean>
+    
+    
+    
+    
+</beans>
+
+
+
