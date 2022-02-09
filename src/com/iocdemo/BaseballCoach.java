@@ -26,5 +26,34 @@ public class BaseballCoach implements Coach {
 		// use fortuneService interface object to get method of helper(dependency) class
 		return fortuneService.getFortune();
 	}
+	
+	
+	
+	
+	
+	
+	/*-----------------------For BeanLifeCyle Methods --------------------------------*/
+	
+	// add a init method
+	public void doMyStartupStuff()
+	{
+		System.out.println("BaseBallCoach: Inside method doMyStartupStuff");
+	}
+	
+	
+	//add a  destroy method
+	public void doMyDestroyStuff()
+	{
+		System.out.println("BaseBallCoach: Inside method doMyDestroyStuff");
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }
