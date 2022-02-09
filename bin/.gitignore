@@ -1,0 +1,7 @@
+/.classpath
+/.project
+/applicationContext.xml
+/beanLifeCycle-applicationContext.xml
+/beanScope-applicationContext.xml
+/com/
+/personal.properties

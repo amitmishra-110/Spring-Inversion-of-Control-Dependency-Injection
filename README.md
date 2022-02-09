@@ -1,5 +1,5 @@
 # Spring-Inversion-of-Control-Dependency-Injection
-Source  code for IOC and DI with xml config ,annotation and java code 
+Source  code for IOC ,DI,Bean Scope,Bean LifeCycle methods with xml config ,annotation and java code 
 
 All the libraries are manually downloaded and installed from the URL.
 No use of maven or gradle has been used in this project
